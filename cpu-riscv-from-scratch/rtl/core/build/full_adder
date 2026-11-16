@@ -1,0 +1,43 @@
+#! /usr/local/bin/vvp
+:ivl_version "12.0 (stable)" "(v12_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x615ba96165a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x615ba9616730 .scope module, "full_adder" "full_adder" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "cout";
+o0x7e3d257cf0d8 .functor BUFZ 1, C4<z>; HiZ drive
+o0x7e3d257cf108 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x615ba965fa60 .functor XOR 1, o0x7e3d257cf0d8, o0x7e3d257cf108, C4<0>, C4<0>;
+o0x7e3d257cf138 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x615ba965fb50 .functor XOR 1, L_0x615ba965fa60, o0x7e3d257cf138, C4<0>, C4<0>;
+L_0x615ba965fbf0 .functor AND 1, o0x7e3d257cf0d8, o0x7e3d257cf108, C4<1>, C4<1>;
+L_0x615ba965fd30 .functor OR 1, o0x7e3d257cf0d8, o0x7e3d257cf108, C4<0>, C4<0>;
+L_0x615ba965fdd0 .functor AND 1, o0x7e3d257cf138, L_0x615ba965fd30, C4<1>, C4<1>;
+L_0x615ba965fee0 .functor OR 1, L_0x615ba965fbf0, L_0x615ba965fdd0, C4<0>, C4<0>;
+v0x615ba963d620_0 .net *"_ivl_0", 0 0, L_0x615ba965fa60;  1 drivers
+v0x615ba965f300_0 .net *"_ivl_4", 0 0, L_0x615ba965fbf0;  1 drivers
+v0x615ba965f3e0_0 .net *"_ivl_6", 0 0, L_0x615ba965fd30;  1 drivers
+v0x615ba965f4d0_0 .net *"_ivl_8", 0 0, L_0x615ba965fdd0;  1 drivers
+v0x615ba965f5b0_0 .net "a", 0 0, o0x7e3d257cf0d8;  0 drivers
+v0x615ba965f6c0_0 .net "b", 0 0, o0x7e3d257cf108;  0 drivers
+v0x615ba965f780_0 .net "cin", 0 0, o0x7e3d257cf138;  0 drivers
+v0x615ba965f840_0 .net "cout", 0 0, L_0x615ba965fee0;  1 drivers
+v0x615ba965f900_0 .net "sum", 0 0, L_0x615ba965fb50;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "full_adder.sv";

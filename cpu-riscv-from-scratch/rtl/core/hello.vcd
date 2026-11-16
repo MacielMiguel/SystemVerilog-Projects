@@ -1,0 +1,85 @@
+$date
+	Mon Nov 16 14:03:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module hello_tb $end
+$var reg 1 ! clk $end
+$var reg 4 " counter [3:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 "
+0!
+$end
+#4000
+b1 "
+1!
+#8000
+0!
+#12000
+b10 "
+1!
+#16000
+0!
+#20000
+b11 "
+1!
+#24000
+0!
+#28000
+b100 "
+1!
+#32000
+0!
+#36000
+b101 "
+1!
+#40000
+0!
+#44000
+b110 "
+1!
+#48000
+0!
+#52000
+b111 "
+1!
+#56000
+0!
+#60000
+b1000 "
+1!
+#64000
+0!
+#68000
+b1001 "
+1!
+#72000
+0!
+#76000
+b1010 "
+1!
+#80000
+0!
+#84000
+b1011 "
+1!
+#88000
+0!
+#92000
+b1100 "
+1!
+#96000
+0!
+#100000
+b1101 "
+1!
